@@ -1,0 +1,82 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: solid 2px #eee;
+}
+
+#header brand {
+	display: inline-block;
+	text-align: left;
+}
+
+#header ul {
+	display:inline-block;
+	padding:0;
+	margin:0;
+	text-align: right;
+
+}
+
+#header li {
+	list-style: none;
+	display: inline-block;
+    list-style: none outside none;
+    padding: 20px;	
+    border-right: solid 1px #eee;
+}
+
+#header li a {
+	text-decoration: none;
+}
+
+#pageContent {
+	padding-top: 40px;
+	margin:30px;
+}
+
+.rowContainer {
+
+}
+
+.rowContainer .card {
+	background-color:#EEFFEE;
+	height:100px;
+	width:100px;
+	border:solid 1px #eee;
+	margin-left:10px;
+	margin-bottom:10px;
+	display:inline-block;
+	vertical-align: top;
+	padding:5px;
+	position: relative;
+}
+
+.rowContainer .card .cardHeader {
+	border-bottom:solid 1px #eee;
+	background-color:#EEFFFE;
+	text-align: right;
+	font-size:.8em;
+}
+
+.rowContainer .card .cardBody {
+	padding: 10px 0 0 5px;
+}
+
+.rowContainer button {
+	position:absolute;
+	bottom:0;
+	right:0;'
+	cursor: pointer;
+}
+
+section.create {
+	border-bottom: solid 2px black;
+	padding-bottom:20px;
+}

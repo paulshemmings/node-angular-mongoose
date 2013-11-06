@@ -1,0 +1,39 @@
+<div class="tasks view">
+
+
+	<section class="create">
+		<header>
+				<h3>Create a task</h3>
+		</header>
+		<section>
+			<form ng-submit="add()">
+				<input type="text" ng-model="newTask.name" placeholder="task name"/>
+				<input type="hidden" ng-init="0" ng-model="newTask.status"/>
+				<select ng-model="newTask.owner"
+						ng-options="person._id as person.firstName for person in people">                
+				</select>
+				<input type="submit" id="submit" value="add"/>
+			</form>
+		</section>			
+	</section>
+
+	<section class="rowContainer">
+		<header>
+			<h3>Tasks</h3>
+		</header>
+		<section class="card" ng-repeat="task in tasks | orderBy: 'name'">
+			<header class="cardHeader">{{task.name}}</header>
+			<section class="cardBody"> 
+				<div>Status: {{task.status}}</div>
+				<div>Owner: {{task.owner.firstName}}</div>
+			</section>			
+			<footer>
+				<button type="button" 
+						ng-click="delete('{{task._id}}')">
+						Remove					
+				</button>
+			</footer>			
+		</section>
+	</section>
+	
+</div>

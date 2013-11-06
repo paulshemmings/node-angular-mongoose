@@ -1,0 +1,35 @@
+<div class="people view">
+
+	
+	<section class="create">
+		<header>
+			<h3>Add a person</h3>
+		</header>
+		<section>
+			<form ng-submit="add()">
+				<input type="text" ng-model="newPerson.firstName" placeholder="first name"/>
+				<input type="text" ng-model="newPerson.lastName" placeholder="last name"/>
+				<input style="display:none;" type="checkbox" ng-model="newPerson.active" value="true"/>
+				<input type="submit" id="submit" value="add"/>
+			</form>
+		</section>			
+	</section>
+
+	
+
+	<section class="rowContainer">
+		<header>
+			<h3>Existing People</h3>
+		</header>
+		<div class="card" ng-repeat="person in people | orderBy: 'lastName'">
+			<div class="cardHeader">{{person.firstName + ' ' + person.lastName}}</div>
+			<div class="cardBody">[n] tasks</div>
+			
+			<button type="button" 
+					ng-click="delete('{{person._id}}')">
+					Remove					
+			</button>
+		</div>
+	</section>
+	
+</div>
