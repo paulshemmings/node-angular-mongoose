@@ -19,6 +19,7 @@ In addition there are:
 3. A single mongoose bootstrapper that creates a connection to the local MondoDB service, and loads the model schemas.
 
 To run locally:
+
 1. Clone the repository
 2. Download MongoDB from here: http://www.mongodb.org/downloads
 3. npm mongoose
